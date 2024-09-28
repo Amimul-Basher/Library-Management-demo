@@ -2,6 +2,7 @@ package com.amimul.book.user;
 
 import com.amimul.book.role.Role;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.*;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -35,6 +36,7 @@ public class User implements UserDetails, Principal {
     private String lastname;
     private LocalDate dateOfBirth;
     @Column(unique = true)
+    @Email
     private String email;
     private String password;
     private boolean accountLocked;
