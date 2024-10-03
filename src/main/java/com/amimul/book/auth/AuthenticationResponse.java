@@ -1,4 +1,4 @@
-package com.amimul.book.controller;
+package com.amimul.book.auth;
 
 import lombok.Builder;
 import lombok.Getter;

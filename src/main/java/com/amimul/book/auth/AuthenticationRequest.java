@@ -1,4 +1,4 @@
-package com.amimul.book.controller;
+package com.amimul.book.auth;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

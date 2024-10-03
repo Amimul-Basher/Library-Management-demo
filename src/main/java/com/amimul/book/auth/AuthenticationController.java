@@ -1,4 +1,4 @@
-package com.amimul.book.controller;
+package com.amimul.book.auth;
 
 
 import io.swagger.v3.oas.annotations.tags.Tag;

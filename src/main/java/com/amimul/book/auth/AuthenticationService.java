@@ -1,4 +1,4 @@
-package com.amimul.book.controller;
+package com.amimul.book.auth;
 
 import com.amimul.book.email.EmailService;
 import com.amimul.book.email.EmailTemplateName;
@@ -14,7 +14,6 @@ import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-import org.antlr.v4.runtime.misc.LogManager;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -144,7 +143,7 @@ public class AuthenticationService {
 
 
 
-//package com.amimul.book.controller;
+//package com.amimul.book.auth;
 //
 //import com.amimul.book.email.EmailService;
 //import com.amimul.book.email.EmailTemplateName;

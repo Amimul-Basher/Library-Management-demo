@@ -1,5 +1,7 @@
 package com.amimul.book.user;
 
+import com.amimul.book.book.Book;
+import com.amimul.book.history.BookTransactionHistory;
 import com.amimul.book.role.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -45,6 +47,14 @@ public class User implements UserDetails, Principal {
     //When I fetch the user I want eagerly fetch the roles
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Book> books;
+
+    @OneToMany(mappedBy = "bookUser")
+    private List<BookTransactionHistory> bookTransactionHistories;
+
+
 
     @CreatedDate
     @Column(updatable = false, nullable = false)
