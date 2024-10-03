@@ -40,6 +40,8 @@ public class AuthenticationService {
 
     @Value("${application.mailing.frontend.activation-url}")
     private String activationUrl;
+    @Value("${application.mailing.frontend.activation-code-length}")
+    private Integer activationCodeLength;
 
     public void register(RegistrationRequest request) throws MessagingException {
         //"USER" is the default role
@@ -71,7 +73,7 @@ public class AuthenticationService {
     }
     private String generateAndSendActivationToken(User user) {
         //This is the length of activation code
-        String activationCode = generateActivationCode(6);
+        String activationCode = generateActivationCode(activationCodeLength);
 
         //Token creation for the user
         var token = Token.builder()
