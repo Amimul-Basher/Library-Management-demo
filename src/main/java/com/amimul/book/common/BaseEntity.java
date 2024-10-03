@@ -35,9 +35,9 @@ public class BaseEntity {
     private LocalDateTime lastModifiedDate;
     @CreatedBy
     @Column(nullable = false, updatable = false)
-    private LocalDateTime createdBy;
+    private String createdBy;
     @LastModifiedBy
     //We do not input, but it gets changed when entity got updated
     @Column(insertable = false)
-    private LocalDateTime lastModifiedBy;
+    private String lastModifiedBy;
 }
