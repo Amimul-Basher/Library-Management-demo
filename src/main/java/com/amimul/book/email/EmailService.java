@@ -21,10 +21,10 @@ import static org.springframework.mail.javamail.MimeMessageHelper.MULTIPART_MODE
 @RequiredArgsConstructor
 public class EmailService {
     private final JavaMailSender mailSender;
-    //Since we need to send html template
+//    Since we need to send html template
     private final SpringTemplateEngine templateEngine;
 
-    // Something to be added
+//    Something to be added
 //    Send email asynchronously so that it do not interrupt the application running
     @Async
     public void sendEmail(String to,
@@ -53,7 +53,7 @@ public class EmailService {
         properties.put("activationCode", activationCode);
 
 
-    //Thymeleaf context
+        //Thymeleaf context
         //parameters should be passed to the template through context
         Context context = new Context();
         context.setVariables(properties);
@@ -65,6 +65,5 @@ public class EmailService {
 
         helper.setText(template, true);
         mailSender.send(mimeMessage);
-
     }
 }

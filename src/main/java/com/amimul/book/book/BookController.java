@@ -108,5 +108,4 @@ public class BookController {
         service.uploadBookCoverPicture(file, connectedUser, bookId);
         return ResponseEntity.accepted().build();
     }
-
 }

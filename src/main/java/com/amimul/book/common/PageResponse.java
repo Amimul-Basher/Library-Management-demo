@@ -1,8 +1,6 @@
 package com.amimul.book.common;
 
-import com.amimul.book.book.BookResponse;
 import lombok.*;
-
 import java.util.List;
 
 @Getter
